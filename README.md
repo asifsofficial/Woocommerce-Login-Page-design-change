@@ -35,6 +35,31 @@ function my_custom_login_logo() {
         .login #backtoblog a, .login #nav a {
             color: #ffffff;
         }
+        .login .button.wp-hide-pw .dashicons {
+            color: black;
+        }
+        .login #login_error {
+            background-color: transparent;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+        .login .button.wp-hide-pw {
+            border: 1px solid; 
+        }
+        .login #loginform .countrycode {
+            max-width: 70px !important;
+        }
+        .wcpa_form_outer .wcpa_form_item select { 
+		    border-radius: var(--wd-form-brd-radius);
+        }
+        .login form {
+            border-radius: 10px;
+            background: #ffffff45;
+        }
+        h1.entry-title {
+            font-size: 22px;
+		    font-weight: 400;
+        }
     </style>';
 }
 add_action('login_head', 'my_custom_login_logo');
@@ -49,21 +74,4 @@ echo '<style type="text/css">
         <div style="position: absolute; bottom: 10px; text-align:center; width:100%"><a href="'.home_url().'" target="_blank" style="text-decoration: none; font-weight: bold;">'.$site_name.'</a> © 2020 - 2023 CREATED BY <img src="/wp-content/uploads/2022/07/asifsofficial-logo.webp" alt="ASIFSOFFICIAL" style="max-width:50px; vertical-align:text-bottom;"/><a href="https://asifsofficial.com" target="_blank" style="text-decoration: none; font-weight: bold;">-SIFSOFFICIAL</a></div>';
 }
 add_action('login_footer','custom_login_footer');
-
-```
-## Custom css
-```
-.wcpa_form_outer .wcpa_form_item select { 
-		border-radius: var(--wd-form-brd-radius);
-}
-
-.login form {
-    border-radius: 10px;
-    background: #ffffff45;
-}
-
-h1.entry-title {
-    font-size: 22px;
-		font-weight: 400;
-}
 ```
