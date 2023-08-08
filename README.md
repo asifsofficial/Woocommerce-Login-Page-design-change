@@ -9,13 +9,34 @@ functions.php
 function custom_login_logo() {
   echo '<style type="text/css">
     h1 a {
-      background-image:url(https://shopeybd.com/wp-admin/images/wordpress-logo.svg) !important;
+      position: relative;
+      animation: moveLogo 2s ease-in-out 1;
+      background-image: url(https://hobyshop.com/wp-content/uploads/2023/08/hobyshop-logo-drack.svg) !important;
+      background-size: 210px !important;
+      width: 210px !important;
+      height: 50px !important;
+    }
+
+    @keyframes moveLogo {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    
+    .login h1 a {
+      position: relative;
+      animation: moveLogo 2s ease-in-out 1;
+      background-image: url(https://hobyshop.com/wp-content/uploads/2023/08/hobyshop-logo-drack.svg) !important;
       background-size: 210px !important;
       width: 210px !important;
       height: 50px !important;
     }
   </style>';
 }
+
 add_action('login_head', 'custom_login_logo');
 
 function my_custom_login_logo() {
